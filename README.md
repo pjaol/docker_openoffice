@@ -8,12 +8,13 @@ Open Office has a memory leak in headless mode that has not been fixed in nearly
 is mitigate the issue using something like docker + mesos to allow for high availability or fault tolerance.
 
 ## To Build
-docker built -t oo
+Checkout this repo git clone https://github.com/pjaol/docker_openoffice.git
+docker built -t oo .
 
 ## To Run
 docker run -d -p 8080:8080 oo
 
-Using a browser go to http://<docker-machine-ip>:8080/convert/
+Using a browser go to http://[docker-machine-ip]:8080/convert/
 
 To use as an API view the JODConvert documentation for webapp usage
 http://www.artofsolving.com/node/15.html
